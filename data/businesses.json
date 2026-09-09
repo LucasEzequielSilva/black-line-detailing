@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "ejemplo-detailing",
+    "nombre": "Ejemplo Detailing",
+    "telefono": "011 15-0000-0000",
+    "whatsapp": "5491100000000",
+    "instagram": null,
+    "direccion": "Av. Siempre Viva 123",
+    "ciudad": "Buenos Aires",
+    "rating": 4.9,
+    "reviews_count": 120,
+    "fotos": [
+      "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=1600&q=80",
+      "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=1600&q=80"
+    ],
+    "maps_url": null
+  }
+]
