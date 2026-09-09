@@ -17,24 +17,13 @@ export default function Hero({ biz }: { biz: Business }) {
 
   return (
     <section id="hero" className="relative lg:h-dvh pt-24 pb-12 lg:pb-0 px-4 sm:px-6 overflow-x-clip">
-      {foto ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={foto}
-          alt=""
-          aria-hidden
-          className="absolute inset-0 w-full h-full object-cover opacity-25 grayscale contrast-125"
-        />
-      ) : (
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-25 grayscale contrast-125"
-          src="https://storage.googleapis.com/webild/default/templates/detailing/hero/hero.mp4"
-        />
-      )}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={foto ?? "/hero-bg.webp"}
+        alt=""
+        aria-hidden
+        className="absolute inset-0 w-full h-full object-cover opacity-40 contrast-110"
+      />
       <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.75) 60%, #000 100%)" }} />
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full pointer-events-none"
