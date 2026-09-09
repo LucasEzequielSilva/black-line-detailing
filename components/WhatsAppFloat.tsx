@@ -1,7 +1,7 @@
 "use client";
 
 import { FaWhatsapp } from "react-icons/fa";
-import { type Business, MSG_PRESUPUESTO, waHref } from "@/data/businesses";
+import { type Business, MSG_PRESUPUESTO, waHref } from "@/data/business-helpers";
 
 export default function WhatsAppFloat({ biz }: { biz: Business }) {
   if (!biz.whatsapp) return null;

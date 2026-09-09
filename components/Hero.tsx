@@ -2,7 +2,7 @@
 
 import { FaWhatsapp } from "react-icons/fa";
 import { HiOutlineCheckCircle, HiOutlineSparkles } from "react-icons/hi2";
-import { type Business, MSG_PRESUPUESTO, heroFoto, waHref } from "@/data/businesses";
+import { type Business, MSG_PRESUPUESTO, heroFoto, waHref } from "@/data/business-helpers";
 import CarModel from "./CarModel";
 
 export default function Hero({ biz }: { biz: Business }) {

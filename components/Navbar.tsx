@@ -1,7 +1,7 @@
 "use client";
 
 import { FaWhatsapp } from "react-icons/fa";
-import { type Business, MSG_PRESUPUESTO, waHref } from "@/data/businesses";
+import { type Business, MSG_PRESUPUESTO, waHref } from "@/data/business-helpers";
 
 export default function Navbar({ biz }: { biz: Business }) {
   // primera palabra blanca, resto en gold (BLACK LINE)
