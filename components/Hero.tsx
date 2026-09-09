@@ -1,7 +1,7 @@
 "use client";
 
 import { FaWhatsapp } from "react-icons/fa";
-import { HiOutlineCheckCircle, HiOutlineSparkles } from "react-icons/hi2";
+import { HiOutlineCheckCircle, HiOutlineSparkles, HiOutlineStar, HiOutlineClock } from "react-icons/hi2";
 import { type Business, MSG_PRESUPUESTO, heroFoto, waHref } from "@/data/business-helpers";
 import CarModel from "./CarModel";
 
@@ -48,7 +48,7 @@ export default function Hero({ biz }: { biz: Business }) {
       <div className="relative z-10 max-w-6xl mx-auto w-full h-full flex flex-col lg:flex-row items-center gap-8 lg:gap-6">
         <div className="flex-1 lg:flex-[0.85] text-center lg:text-left space-y-5 lg:py-8">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs sm:text-sm font-medium text-slate-300">
-            <span className="flex size-2 rounded-full bg-amber-500 shrink-0" />
+            <span className="flex size-2 rounded-full shrink-0 animate-pulse" style={{ background: "#b8c2cc", boxShadow: "0 0 6px rgba(184,194,204,0.8)" }} />
             <span>{biz.ciudad}</span>
             <span className="text-slate-500">·</span>
             <span>Turnos para esta semana</span>
@@ -95,6 +95,30 @@ export default function Hero({ biz }: { biz: Business }) {
 
         <div className="flex-1 lg:flex-[1.8] w-full overflow-visible relative lg:self-stretch">
           <CarModel />
+
+          <div className="hidden sm:flex absolute top-4 left-0 lg:top-10 lg:-left-4 items-center gap-3 glass-panel rounded-2xl px-4 py-3 shadow-xl backdrop-blur-md" style={{ border: "1px solid rgba(184,194,204,0.35)" }}>
+            <div className="w-9 h-9 rounded-full flex items-center justify-center shrink-0" style={{ background: "rgba(184,194,204,0.15)" }}>
+              <HiOutlineStar aria-hidden className="size-4" style={{ color: "#b8c2cc" }} />
+            </div>
+            <div className="leading-tight">
+              <p className="text-gold font-semibold text-sm">
+                {biz.rating != null ? biz.rating.toFixed(1) : "4.9"} / 5
+              </p>
+              <p className="text-[11px] text-slate-400">
+                {biz.reviews_count != null ? `${biz.reviews_count} reseñas` : "+800 autos detailed"}
+              </p>
+            </div>
+          </div>
+
+          <div className="hidden sm:flex absolute bottom-6 right-0 lg:bottom-16 lg:-right-4 items-center gap-3 glass-panel rounded-2xl px-4 py-3 shadow-xl backdrop-blur-md" style={{ border: "1px solid rgba(184,194,204,0.35)" }}>
+            <div className="w-9 h-9 rounded-full flex items-center justify-center shrink-0" style={{ background: "rgba(184,194,204,0.15)" }}>
+              <HiOutlineClock aria-hidden className="size-4" style={{ color: "#b8c2cc" }} />
+            </div>
+            <div className="leading-tight">
+              <p className="text-gold font-semibold text-sm">8 años</p>
+              <p className="text-[11px] text-slate-400">en el rubro</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

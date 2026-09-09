@@ -52,7 +52,7 @@ function Loader() {
   );
 }
 
-class ModelErrorBoundary extends Component<{ children: ReactNode }, { error: string | null }> {
+class ErrorBoundary extends Component<{ children: ReactNode; fallback: ReactNode; label: string }, { error: string | null }> {
   state: { error: string | null } = { error: null };
 
   static getDerivedStateFromError(error: unknown) {
@@ -60,19 +60,11 @@ class ModelErrorBoundary extends Component<{ children: ReactNode }, { error: str
   }
 
   componentDidCatch(error: unknown) {
-    console.error("[CarModel] failed to load /car.glb:", error);
+    console.error(`[CarModel] ${this.props.label}:`, error);
   }
 
   render() {
-    if (this.state.error) {
-      return (
-        <mesh>
-          <boxGeometry args={[1, 0.5, 2]} />
-          <meshStandardMaterial color="#7a1f1f" />
-        </mesh>
-      );
-    }
-    return this.props.children;
+    return this.state.error ? this.props.fallback : this.props.children;
   }
 }
 
@@ -89,14 +81,24 @@ export default function CarModel() {
         <directionalLight position={[-5, -5, -5]} intensity={0.7} />
         <directionalLight position={[0, 2, -6]} intensity={2.2} color="#ffffff" />
         <directionalLight position={[-6, 0, 2]} intensity={1.2} color="#b8c2cc" />
-        <ModelErrorBoundary>
+        <ErrorBoundary
+          label="failed to load /car.glb"
+          fallback={
+            <mesh>
+              <boxGeometry args={[1, 0.5, 2]} />
+              <meshStandardMaterial color="#7a1f1f" />
+            </mesh>
+          }
+        >
           <Suspense fallback={<Loader />}>
             <Model />
           </Suspense>
-        </ModelErrorBoundary>
-        <Suspense fallback={null}>
-          <Environment preset="studio" />
-        </Suspense>
+        </ErrorBoundary>
+        <ErrorBoundary label="failed to load environment HDR" fallback={null}>
+          <Suspense fallback={null}>
+            <Environment preset="studio" />
+          </Suspense>
+        </ErrorBoundary>
         <OrbitControls autoRotate autoRotateSpeed={3.5} enableZoom={false} enablePan={false} minPolarAngle={Math.PI / 2.6} maxPolarAngle={Math.PI / 2.2} />
       </Canvas>
     </div>
