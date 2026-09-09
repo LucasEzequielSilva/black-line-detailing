@@ -30,7 +30,7 @@ export default function BeforeAfter() {
             <div key={p.servicio} className="product-card rounded-[24px] overflow-hidden">
               <CompareSlider before={p.antes} after={p.despues} alt={p.servicio} />
               <div className="p-4">
-                <h3 className="text-white font-semibold text-sm" style={{ textTransform: "none", fontFamily: "inherit" }}>
+                <h3 className="font-semibold text-sm" style={{ textTransform: "none", fontFamily: "inherit" }}>
                   {p.servicio}
                 </h3>
               </div>

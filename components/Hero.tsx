@@ -54,7 +54,7 @@ export default function Hero({ biz }: { biz: Business }) {
             <span>Turnos para esta semana</span>
           </div>
 
-          <h1 className="text-[32px] font-medium tracking-tight text-white leading-tight text-balance">
+          <h1 className="text-[32px] font-medium tracking-tight leading-tight text-balance">
             El Lavadero le Está Arruinando
             <br />
             <span className="text-gold">la Pintura a tu Auto.</span>

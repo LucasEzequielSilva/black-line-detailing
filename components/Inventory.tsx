@@ -55,7 +55,7 @@ export default function Inventory({ biz }: { biz: Business }) {
                 <img src={biz.fotos[i] ?? s.img} alt={s.nombre} className="w-full h-full object-cover" />
               </div>
               <div className="p-5 flex flex-col gap-2 flex-1">
-                <h3 className="text-white font-semibold text-lg" style={{ textTransform: "none", fontFamily: "inherit" }}>
+                <h3 className="font-semibold text-lg" style={{ textTransform: "none", fontFamily: "inherit" }}>
                   {s.nombre}
                 </h3>
                 <p className="text-sm font-semibold" style={{ color: "#b8c2cc" }}>{s.precio}</p>
@@ -78,7 +78,7 @@ export default function Inventory({ biz }: { biz: Business }) {
         <div className="glass-panel rounded-[28px] mt-8 p-8 md:p-10 flex flex-col md:flex-row items-center gap-6 justify-between">
           <div>
             <span className="section-badge mb-3">¿No sabés qué necesita tu auto?</span>
-            <h3 className="text-white font-semibold text-xl md:text-2xl mb-2" style={{ textTransform: "none", fontFamily: "inherit" }}>
+            <h3 className="font-semibold text-xl md:text-2xl mb-2" style={{ textTransform: "none", fontFamily: "inherit" }}>
               Mandanos 3 Fotos y Te Decimos Qué Hacerle
             </h3>
             <p className="text-sm text-slate-400 max-w-xl">

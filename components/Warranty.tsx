@@ -24,7 +24,7 @@ export default function Warranty() {
               <div className="w-11 h-11 rounded-full flex items-center justify-center mb-5" style={{ background: "rgba(184,194,204,0.1)" }}>
                 <p.icon aria-hidden className="size-5" style={{ color: "#b8c2cc" }} />
               </div>
-              <h3 className="text-white font-semibold text-base mb-2" style={{ textTransform: "none", fontFamily: "inherit" }}>
+              <h3 className="font-semibold text-base mb-2" style={{ textTransform: "none", fontFamily: "inherit" }}>
                 {p.titulo}
               </h3>
               <p className="text-sm text-slate-400 leading-relaxed">{p.texto}</p>
