@@ -26,6 +26,16 @@ h1, h2, h3 {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.btn-red {
+  text-wrap: nowrap;
+  border: 1.5px solid transparent;
+  background: #e8291c;
+  color: #fff;
+  transition: filter 150ms ease;
+}
+.btn-red:hover { filter: brightness(1.1); }
+.btn-red:active { filter: brightness(0.92); }
+
 .btn-gold {
   text-wrap: nowrap;
   border: 1.5px solid transparent;

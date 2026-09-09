@@ -58,7 +58,7 @@ export default function Hero({ biz }: { biz: Business }) {
               href={waHref(biz, MSG_PRESUPUESTO)}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-gold group w-full sm:w-auto px-7 py-3.5 min-h-[44px] rounded-full text-sm font-semibold uppercase tracking-wide active:scale-95 transition-[transform,filter] duration-150 flex items-center justify-center gap-2.5"
+              className="btn-red group w-full sm:w-auto px-7 py-3.5 min-h-[44px] rounded-xl text-sm font-semibold uppercase tracking-wide active:scale-95 transition-[transform,filter] duration-150 flex items-center justify-center gap-2.5"
             >
               <FaWhatsapp aria-hidden className="size-4" />
               Consultar por WhatsApp
