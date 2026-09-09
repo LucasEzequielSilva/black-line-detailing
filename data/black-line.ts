@@ -12,6 +12,6 @@ export const BLACK_LINE: Business = {
   horario: "Lun a sáb · 9:00–19:00",
   rating: null,
   reviews_count: null,
-  fotos: ["/hero-bg.webp"],
+  fotos: [],
   maps_url: null,
 };
