@@ -1,17 +1,10 @@
 import CompareSlider from "./CompareSlider";
 import SectionDivider from "./SectionDivider";
 
-function asset(path: string) {
-  return `https://storage.googleapis.com/webild/default/templates/${path}`;
-}
-
 const PARES = [
   { servicio: "Pintura Exterior", antes: "/before-after/pintura-antes.jpg", despues: "/before-after/pintura-despues.jpg", real: true },
   { servicio: "Interior", antes: "/before-after/interior-antes.jpg", despues: "/before-after/interior-despues.jpg", real: true },
   { servicio: "Motor y Compartimento", antes: "/before-after/motor-antes.jpg", despues: "/before-after/motor-despues.jpg", real: true },
-  { servicio: "Recubrimiento Cerámico", antes: asset("detailing/features/features3.webp"), despues: asset("detailing/team/team2.webp") },
-  { servicio: "Tapizados y Cuero", antes: asset("detailing/team/team1.webp"), despues: asset("detailing/team/team3.webp") },
-  { servicio: "Rines y Llantas", antes: asset("detailing/team/team2.webp"), despues: asset("detailing/features/feature1.webp") },
 ];
 
 export default function BeforeAfter() {
