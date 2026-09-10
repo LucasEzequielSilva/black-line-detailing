@@ -7,6 +7,8 @@ const PARES = [
   { servicio: "Motor y Compartimento", antes: "/before-after/motor-antes.jpg", despues: "/before-after/motor-despues.jpg", real: true },
 ];
 
+const FOTO_UNICA = { servicio: "Recubrimiento Cerámico", foto: "/before-after/ceramico.jpg" };
+
 export default function BeforeAfter() {
   return (
     <section id="resultados" className="relative px-5 sm:px-8 py-24" style={{ background: "#101010" }}>
@@ -18,7 +20,7 @@ export default function BeforeAfter() {
           <p className="text-slate-400">Así queda un auto cuando se trabaja en serio, no a las apuradas.</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {PARES.map((p) => (
             <div key={p.servicio} className="product-card rounded-[24px] overflow-hidden">
               <CompareSlider before={p.antes} after={p.despues} alt={p.servicio} real={p.real} />
@@ -29,6 +31,17 @@ export default function BeforeAfter() {
               </div>
             </div>
           ))}
+          <div className="product-card rounded-[24px] overflow-hidden">
+            <div className="relative aspect-square overflow-hidden">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={FOTO_UNICA.foto} alt={FOTO_UNICA.servicio} className="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            <div className="p-4">
+              <h3 className="font-semibold text-sm" style={{ textTransform: "none", fontFamily: "inherit" }}>
+                {FOTO_UNICA.servicio}
+              </h3>
+            </div>
+          </div>
         </div>
       </div>
     </section>
