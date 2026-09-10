@@ -1,17 +1,13 @@
 import { FaWhatsapp } from "react-icons/fa";
 import { type Business, MSG_FOTOS, MSG_PRESUPUESTO, waHref } from "@/data/businesses";
 
-function asset(path: string) {
-  return `https://storage.googleapis.com/webild/default/templates/${path}`;
-}
-
 const SERVICIOS = [
   {
     nombre: "Detail de Interior",
     descripcion: "Aspirado profundo, manchas en tapizados, cuero tratado y desinfección completa.",
     ideal_si: "Compraste un usado, tenés chicos o usás el auto todos los días.",
     precio: "Desde $60.000",
-    img: asset("detailing/features/feature1.webp"),
+    img: "/before-after/interior-despues.jpg",
   },
   {
     nombre: "Detail de Exterior",
@@ -19,14 +15,49 @@ const SERVICIOS = [
     ideal_si: "Notás la pintura opaca o con marcas.",
     precio: "Desde $95.000",
     destacado: true,
-    img: asset("detailing/team/team2.webp"),
+    img: "/before-after/pintura-despues.jpg",
+  },
+  {
+    nombre: "Tratamiento Acrílico",
+    descripcion: "Sellador de pintura de alta durabilidad, una alternativa más accesible al cerámico.",
+    ideal_si: "Querés protección extra sin el gasto del tratamiento cerámico.",
+    precio: "Desde $110.000",
+    img: "/before-after/ceramico.jpg",
   },
   {
     nombre: "Recubrimiento Cerámico",
     descripcion: "Incluye el Detail de Exterior completo, más protección cerámica que dura años.",
     ideal_si: "Ya lo dejaste impecable y querés que se mantenga así.",
     precio: "Desde $140.000",
-    img: asset("detailing/features/features2.webp"),
+    img: "/before-after/ceramico.jpg",
+  },
+  {
+    nombre: "PPF (Film de Protección)",
+    descripcion: "Película transparente que blinda la pintura contra piedras, ramas y rayones.",
+    ideal_si: "Tenés un auto nuevo o premium y querés cuidarlo desde el día uno.",
+    precio: "Desde $250.000",
+    img: "/before-after/ceramico.jpg",
+  },
+  {
+    nombre: "Polarizado",
+    descripcion: "Película de control solar en los vidrios: menos calor adentro y más privacidad.",
+    ideal_si: "Viajás mucho al sol o querés más intimidad en el auto.",
+    precio: "Desde $80.000",
+    img: "/before-after/ceramico.jpg",
+  },
+  {
+    nombre: "Ploteo",
+    descripcion: "Vinilo decorativo o wrap completo para cambiar el color o sumar un diseño propio.",
+    ideal_si: "Querés renovar el look del auto sin pintarlo.",
+    precio: "Desde $180.000",
+    img: "/before-after/ceramico.jpg",
+  },
+  {
+    nombre: "Saca Bollos (PDR)",
+    descripcion: "Reparación de abolladuras sin pintar, sin dejar marcas ni diferencia de color.",
+    ideal_si: "Tenés un golpe de puerta o granizo y querés arreglarlo sin repintar.",
+    precio: "Desde $70.000",
+    img: "/before-after/ceramico.jpg",
   },
 ];
 
@@ -42,7 +73,7 @@ export default function Inventory({ biz }: { biz: Business }) {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {SERVICIOS.map((s, i) => (
             <div key={s.nombre} className="product-card rounded-[24px] overflow-hidden flex flex-col relative">
               {s.destacado && (
