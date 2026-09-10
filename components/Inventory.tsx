@@ -15,7 +15,7 @@ const SERVICIOS = [
     ideal_si: "Notás la pintura opaca o con marcas.",
     precio: "Desde $95.000",
     destacado: true,
-    img: "/before-after/pintura-despues.jpg",
+    img: "/servicios/exterior.jpg",
   },
   {
     nombre: "Tratamiento Acrílico",
