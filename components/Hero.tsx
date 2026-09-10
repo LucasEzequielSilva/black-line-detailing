@@ -1,7 +1,7 @@
 "use client";
 
 import { FaWhatsapp } from "react-icons/fa";
-import { HiOutlineCheckCircle, HiOutlineSparkles, HiOutlineStar, HiOutlineClock } from "react-icons/hi2";
+import { HiOutlineCheckCircle, HiOutlineSparkles } from "react-icons/hi2";
 import { type Business, MSG_PRESUPUESTO, heroFoto, waHref } from "@/data/business-helpers";
 
 export default function Hero({ biz }: { biz: Business }) {
@@ -50,13 +50,13 @@ export default function Hero({ biz }: { biz: Business }) {
           </div>
 
           <h1 className="text-[32px] font-medium tracking-tight leading-tight text-balance">
-            El Lavadero le Está Arruinando
+            Detailing a Mano,
             <br />
-            <span className="text-gold">la Pintura a tu Auto.</span>
+            <span className="text-gold">Resultado de Showroom.</span>
           </h1>
 
           <p className="text-base md:text-lg text-slate-400 max-w-2xl font-light leading-relaxed text-pretty">
-            Trabajamos a mano: sacamos los remolinos que dejó el lavadero y te devolvemos un brillo que se nota de lejos.
+            Corrección de pintura, protección cerámica y detailing interior, hecho a mano con productos profesionales. Un brillo que se nota de lejos.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto">
@@ -86,30 +86,6 @@ export default function Hero({ biz }: { biz: Business }) {
               </span>
             ))}
           </div>
-        </div>
-      </div>
-
-      <div className="hidden lg:flex absolute top-28 right-8 xl:right-16 items-center gap-3 glass-panel rounded-2xl px-4 py-3 shadow-xl backdrop-blur-md z-10" style={{ border: "1px solid rgba(184,194,204,0.35)" }}>
-        <div className="w-9 h-9 rounded-full flex items-center justify-center shrink-0" style={{ background: "rgba(184,194,204,0.15)" }}>
-          <HiOutlineStar aria-hidden className="size-4" style={{ color: "#b8c2cc" }} />
-        </div>
-        <div className="leading-tight">
-          <p className="text-gold font-semibold text-sm">
-            {biz.rating != null ? biz.rating.toFixed(1) : "4.9"} / 5
-          </p>
-          <p className="text-[11px] text-slate-400">
-            {biz.reviews_count != null ? `${biz.reviews_count} reseñas` : "+800 autos detailed"}
-          </p>
-        </div>
-      </div>
-
-      <div className="hidden lg:flex absolute bottom-16 right-8 xl:right-16 items-center gap-3 glass-panel rounded-2xl px-4 py-3 shadow-xl backdrop-blur-md z-10" style={{ border: "1px solid rgba(184,194,204,0.35)" }}>
-        <div className="w-9 h-9 rounded-full flex items-center justify-center shrink-0" style={{ background: "rgba(184,194,204,0.15)" }}>
-          <HiOutlineClock aria-hidden className="size-4" style={{ color: "#b8c2cc" }} />
-        </div>
-        <div className="leading-tight">
-          <p className="text-gold font-semibold text-sm">8 años</p>
-          <p className="text-[11px] text-slate-400">en el rubro</p>
         </div>
       </div>
     </section>
