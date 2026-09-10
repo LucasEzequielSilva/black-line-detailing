@@ -40,8 +40,8 @@ export default function Hero({ biz }: { biz: Business }) {
         style={{ background: "radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 70%)" }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto w-full h-full flex items-center">
-        <div className="max-w-xl text-center lg:text-left space-y-5 mx-auto lg:mx-0 py-12 lg:py-8">
+      <div className="relative z-10 max-w-6xl mx-auto w-full h-full flex items-center justify-center">
+        <div className="max-w-2xl text-center space-y-5 mx-auto py-12 lg:py-8">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs sm:text-sm font-medium text-slate-300">
             <span className="flex size-2 rounded-full shrink-0 animate-pulse" style={{ background: "#b8c2cc", boxShadow: "0 0 6px rgba(184,194,204,0.8)" }} />
             <span>{biz.ciudad}</span>
@@ -59,7 +59,7 @@ export default function Hero({ biz }: { biz: Business }) {
             Trabajamos a mano: sacamos los remolinos que dejó el lavadero y te devolvemos un brillo que se nota de lejos.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center lg:items-start gap-3 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto">
             <a
               href={waHref(biz, MSG_PRESUPUESTO)}
               target="_blank"
@@ -78,7 +78,7 @@ export default function Hero({ biz }: { biz: Business }) {
             </a>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-5 gap-y-2 pt-1">
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 pt-1">
             {stats.map((item) => (
               <span key={item} className="inline-flex items-center gap-1.5 text-xs sm:text-sm text-slate-400">
                 <HiOutlineCheckCircle aria-hidden className="size-4 shrink-0" style={{ color: "#b8c2cc" }} />
