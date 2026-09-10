@@ -6,12 +6,12 @@ function asset(path: string) {
 }
 
 const PARES = [
-  { servicio: "Interior", antes: asset("detailing/features/feature1.webp"), despues: asset("detailing/features/features3.webp") },
-  { servicio: "Pintura Exterior", antes: asset("detailing/features/features2.webp"), despues: asset("detailing/team/team1.webp") },
+  { servicio: "Pintura Exterior", antes: "/before-after/pintura-antes.jpg", despues: "/before-after/pintura-despues.jpg", real: true },
+  { servicio: "Interior", antes: "/before-after/interior-antes.jpg", despues: "/before-after/interior-despues.jpg", real: true },
+  { servicio: "Motor y Compartimento", antes: "/before-after/motor-antes.jpg", despues: "/before-after/motor-despues.jpg", real: true },
   { servicio: "Recubrimiento Cerámico", antes: asset("detailing/features/features3.webp"), despues: asset("detailing/team/team2.webp") },
   { servicio: "Tapizados y Cuero", antes: asset("detailing/team/team1.webp"), despues: asset("detailing/team/team3.webp") },
   { servicio: "Rines y Llantas", antes: asset("detailing/team/team2.webp"), despues: asset("detailing/features/feature1.webp") },
-  { servicio: "Plásticos y Tablero", antes: asset("detailing/team/team3.webp"), despues: asset("detailing/features/features2.webp") },
 ];
 
 export default function BeforeAfter() {
@@ -28,7 +28,7 @@ export default function BeforeAfter() {
         <div className="grid md:grid-cols-3 gap-6">
           {PARES.map((p) => (
             <div key={p.servicio} className="product-card rounded-[24px] overflow-hidden">
-              <CompareSlider before={p.antes} after={p.despues} alt={p.servicio} />
+              <CompareSlider before={p.antes} after={p.despues} alt={p.servicio} real={p.real} />
               <div className="p-4">
                 <h3 className="font-semibold text-sm" style={{ textTransform: "none", fontFamily: "inherit" }}>
                   {p.servicio}

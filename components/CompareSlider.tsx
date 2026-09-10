@@ -6,10 +6,13 @@ export default function CompareSlider({
   before,
   after,
   alt,
+  real = false,
 }: {
   before: string;
   after: string;
   alt: string;
+  /** true when before/after are genuinely different photos (skips the grayscale trick) */
+  real?: boolean;
 }) {
   const [pos, setPos] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -51,7 +54,7 @@ export default function CompareSlider({
       <img
         src={before}
         alt={`Antes — ${alt}`}
-        className="absolute inset-0 w-full h-full object-cover grayscale contrast-75"
+        className={`absolute inset-0 w-full h-full object-cover${real ? "" : " grayscale contrast-75"}`}
         style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
         draggable={false}
       />
