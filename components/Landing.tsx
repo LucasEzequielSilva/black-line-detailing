@@ -6,6 +6,7 @@ import BeforeAfter from "./BeforeAfter";
 import Inventory from "./Inventory";
 import Warranty from "./Warranty";
 import Location from "./Location";
+import About from "./About";
 import Footer from "./Footer";
 import WhatsAppFloat from "./WhatsAppFloat";
 
@@ -19,6 +20,7 @@ export default function Landing({ biz }: { biz: Business }) {
       <Inventory biz={biz} />
       <Warranty />
       <Location biz={biz} />
+      <About biz={biz} />
       <Footer biz={biz} />
       <WhatsAppFloat biz={biz} />
     </>

@@ -7,29 +7,6 @@ export default function Footer({ biz }: { biz: Business }) {
         <span>© {new Date().getFullYear()} {biz.nombre} — {biz.ciudad}</span>
         <span>{biz.direccion} · {biz.telefono}</span>
       </div>
-      <div className="max-w-6xl mx-auto text-center sm:text-left mt-3">
-        <p className="text-[11px] text-slate-600">
-          Modelo 3D &ldquo;BMW M4 G82 Coupe&rdquo; por{" "}
-          <a
-            href="https://sketchfab.com/Sloftm_Carz"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-slate-400"
-          >
-            Sloftm_Carz
-          </a>
-          , usado bajo licencia{" "}
-          <a
-            href="https://creativecommons.org/licenses/by/4.0/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-slate-400"
-          >
-            CC Attribution
-          </a>
-          .
-        </p>
-      </div>
     </footer>
   );
 }
