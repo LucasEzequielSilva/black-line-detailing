@@ -38,7 +38,7 @@ export default function About({ biz }: { biz: Business }) {
 
   return (
     <section id="nosotros" className="relative px-5 sm:px-8 pt-24 pb-28" style={{ background: "#101010" }}>
-      <SectionDivider edge="top" shape="step" />
+      <SectionDivider edge="top" />
 
       <div className="max-w-6xl mx-auto grid gap-10 md:gap-14 md:grid-cols-2 md:items-center">
         <div>
